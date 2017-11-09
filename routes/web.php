@@ -18,10 +18,14 @@ Route::get('/', function () {
 
 Route::get('hello', function() {
     // un test de tweeter.. 
+    $val = rand();
+    // dd($val);
     $tweet = \Twitter::postTweet([
-        'status' => '@AEEONLINE Me encanta estar sin luz!!! .... -_-' ,
+        'status' => $val . ' - Querida @AEEONLINE todavia nos tienen sin luz!!!' ,
         'format' => 'json'
         ]);
-    echo $tweet;
+        // dd($tweet);
+    // echo $tweet;
+    echo "Posted on tweeter";
 });
 
